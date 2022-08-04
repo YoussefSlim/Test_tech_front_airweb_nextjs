@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <SWRConfig value={{ fetcher: httpClient.get, errorRetryCount: 0 }}>
       <Header />
-      <main className="min-h-mobile px-2 xl:min-h-desktop xl:w-3/5 xl:mx-auto xl:px-0 ">
-        <div className={classNames('overflow-y-auto')}>
+      <main className="min-h-mobile px-2 xl:min-h-desktop xl:w-3/5 xl:mx-auto xl:px-0 mt-[59px]">
+        <div className={classNames('overflow-y-auto ')}>
           <Component {...pageProps} />
         </div>
       </main>

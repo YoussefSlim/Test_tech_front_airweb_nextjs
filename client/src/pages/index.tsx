@@ -2,6 +2,7 @@ import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import useSWR from 'swr';
 
+import { Card } from '@/components';
 import { StaleIndicator } from '@/components/loading';
 import { createSSRHttpClient, endPoints, routeNames, ssrRedirect } from '@/support';
 import { Category, Product } from '@/types';
@@ -38,13 +39,15 @@ export default function Index({
         <link href="/favicon.png" rel="icon" />
       </Head>
       {productsByCategory?.map((c) => (
-        <section key={c.id}>
-          <h2 className="font-bold">{c.label}</h2>
-          <ul>
+        <section key={c.id} className="flex flex-col justify-center">
+          <div className="mx-auto 3xl:mx-[unset]">
+            <h2 className="font-bold md:w-[403px] w-[386px] 3xl:w-full">{c.label}</h2>
+          </div>
+          <div className="flex flex-col items-center my-5 space-y-5">
             {c.productfiltred?.map((p) => (
-              <li key={p.id}>{p.label}</li>
+              <Card key={p.id} {...p} />
             ))}
-          </ul>
+          </div>
         </section>
       ))}
     </StaleIndicator>

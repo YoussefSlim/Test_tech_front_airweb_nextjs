@@ -9,10 +9,11 @@ module.exports = {
         'main-color-hover': '#1A2CC9',
       },
       minHeight: {
-        mobile: 'calc(100vh - (48px + 565.417px))',
-        desktop: 'calc(100vh - (48px + 237.35px))',
+        mobile: 'calc(100vh - (48px + 565.417px + 59px))',
+        desktop: 'calc(100vh - (48px + 237.35px + 59px))',
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line global-require
+  plugins: [require('@tailwindcss/line-clamp')],
 };

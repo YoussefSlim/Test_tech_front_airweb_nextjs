@@ -1,4 +1,6 @@
 {
+  "ADD_TO_CART": "Add to cart",
+  "REMOVE_FROM_CART": "Remove from cart",
   "PRODUCT_ADDED": "product added",
   "PRODUCT_REMOVED": "product removed"
 }

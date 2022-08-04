@@ -1,5 +1,5 @@
 {
   "locales": ["en", "fr", "de"],
   "defaultLocale": "fr",
-  "pages": { "*": ["common"], "/": ["home"] }
+  "pages": { "*": ["common"], "/": ["home"], "/cart": ["cart"] }
 }

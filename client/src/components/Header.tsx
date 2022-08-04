@@ -21,7 +21,7 @@ export function Header() {
           <IconSearch />
         </div>
         <div className="relative flex items-center w-[29px] cursor-pointer transition ease duration-300">
-          <Link href="/">
+          <Link href="/cart">
             <a className="w-[29px] primary-text-color cursor-pointer hover:scale-[1.03]">
               {products.length > 0 && (
                 <div className="flex justify-center items-center absolute top-[13px] right-0 h-4 min-w-[16px]  primary-bg-color rounded-full z-30 text-white">

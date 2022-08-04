@@ -2,6 +2,7 @@ export function IconCart() {
   return (
     <svg
       aria-hidden="true"
+      className="w-[29px]"
       fill="currentColor"
       focusable="false"
       role="presentation"

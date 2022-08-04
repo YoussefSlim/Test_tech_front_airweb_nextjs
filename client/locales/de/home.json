@@ -1,4 +1,6 @@
 {
+  "ADD_TO_CART": "im Wagen",
+  "REMOVE_FROM_CART": "Teile entfernen",
   "PRODUCT_ADDED": "produkt hinzugefügt",
   "PRODUCT_REMOVED": "produkt entfernt"
 }

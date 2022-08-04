@@ -6,3 +6,4 @@ export * from './twitter';
 export * from './youtube';
 export * from './logo';
 export * from './cart-add';
+export * from './cart-remove';

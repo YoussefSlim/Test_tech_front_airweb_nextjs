@@ -1,4 +1,6 @@
 {
+  "ADD_TO_CART": "Ajouter Au panier",
+  "REMOVE_FROM_CART": "Supprimer du panier",
   "PRODUCT_ADDED": "produit ajouté",
   "PRODUCT_REMOVED": "produit retiré"
 }

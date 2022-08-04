@@ -1,3 +1,5 @@
+import { Product } from '@/types';
+
 // get Year
 export const year = new Date().getFullYear();
 
@@ -13,3 +15,7 @@ export const sortIndex = (a: { index: number }, b: { index: number }) => b.index
 // sort Product by label
 export const sortLabel = (a: { label: string }, b: { label: string }) =>
   `${a.label}`.replace(/([^\D])\s\x\s/g, '').localeCompare(b.label.replace(/([^\D])\s\x\s/g, ''));
+
+// calculate total price for cart
+export const totalCart = (items: Product[]) =>
+  items.reduce((total, item) => total + convertPrice(item.price), 0);

@@ -1,10 +1,14 @@
+import { useContext } from 'react';
+
 import { CartAdd } from '@/assets/icons';
+import { CartContext } from '@/contexts';
 import { Product } from '@/types';
 import { convertPrice } from '@/utils';
 
 export function Card(props: Product) {
   // eslint-disable-next-line camelcase
   const { description, label, price, thumbnail_url } = props;
+  const { toggleAddProductToCart } = useContext(CartContext);
 
   return (
     <article className="relative w-[386px] bg-white rounded-xl shadow-lg md:w-[403px] p-[10px] flex md:flex-col justify-between">
@@ -30,6 +34,7 @@ export function Card(props: Product) {
         <button
           className="bg-[#08104D] rounded-[10px] border text-white hover:text-[#08104D] hover:border-[#08104D] hover:bg-white transition duration-500 self-end"
           type="button"
+          onClick={toggleAddProductToCart(props)}
         >
           <div className="flex flex-row items-center justify-center uppercase font-bold w-[36px] h-[29px] rounded-[4px] md:w-[193px] md:h-[38px] md:row md:justify-around ">
             <CartAdd />

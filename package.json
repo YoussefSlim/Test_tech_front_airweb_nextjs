@@ -1,0 +1,18 @@
+{
+  "name": "test-front-airweb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "setup": "yarn && yarn --cwd ./client && yarn --cwd ./server",
+    "dev": "concurrently -n client,server -c blue,green -t \"HH:mm:ss\" -p \"{name} {time}\" \"yarn --cwd ./client dev\" \"yarn --cwd ./server start\"",
+    "lint": "yarn --cwd ./client run lint && --cwd ./server run lint",
+    "fix": "yarn --cwd ./client yarn fix && yarn --cwd ./server run fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git@github.com:YoussefSlim/test_tech_front_airweb_nextjs.git",
+  "author": "YoussefSlim <youssefslim9511@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}

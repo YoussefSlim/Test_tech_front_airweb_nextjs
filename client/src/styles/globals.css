@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Poppins:wght@600;800&display=swap');
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+}
+html {
+  @apply h-full;
+}
+
+:root {
+  --max-width: 1440px;
+  --primary-bg-color: #f7f7f7;
+  --primary-text-color: #0099cc;
+  --secondary-text-color: #08104d;
+  --border-button: #08104d;
+}
+
+body {
+  @apply min-h-full;
+  background-color: var(--primary-bg-color);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+#__next {
+  @apply flex;
+  @apply flex-col;
+  @apply min-h-screen;
+  padding-bottom: 0;
+}
+@layer components {
+  .hover-social-media {
+    @apply hover:opacity-30 transition duration-700;
+  }
+  .uppercase-bold {
+    @apply uppercase  font-bold mb-2;
+  }
+  .primary-bg-color {
+    background-color: var(--secondary-text-color);
+  }
+}
